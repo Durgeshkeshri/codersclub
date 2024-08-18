@@ -31,7 +31,7 @@ function App() {
   };
 
   return (
-    <> <div className="bg-slate-900">
+    <> <div className="bg-slate-950">
      <Menu handleScroll={handleScroll} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu}></Menu>
      <div className="mt-[3%]">
      <Body></Body>

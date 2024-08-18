@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import codersclub from '../assets/codersclub.png';
+import codersclub from '../assets/logo.jpg';
 
 export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
   const arr = ["Home", "About", "Events", "Gallery"];

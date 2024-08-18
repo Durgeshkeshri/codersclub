@@ -1,16 +1,16 @@
 import React from 'react';
-import header from '../assets/header.jpg';
+import header from '../assets/codefusion.jpg';
 import bgvideo from '../assets/bgvideo.mp4';
 
 export const Body = () => {
     return (
         <>
             <div className="flex justify-center items-center flex-col gap-12">
-                <div className="flex flex-col justify-center items-center text-white leading-tight">
-                    <h1 className='sm:text-[40px] tab:text-[60px] xl:text-[90px] font-bold text-center'>
+                <div className="flex flex-col justify-center items-center text-white leading-tight max-smvideo:font-semibold">
+                    <h1 className='max-sm:text-[39px] sm:text-[40px] tab:text-[60px] xl:text-[90px] font-bold text-center'>
                         WE <span className='text-[#0080FF]'>CODER'S</span> CLUB
                     </h1>
-                    <p className='sm:text-[25px] tab:text-[34px] xl:text-[51px] block text-center mt-4 tracking-wider'>
+                    <p className='max-sm:text-[21px] sm:text-[25px] tab:text-[34px] xl:text-[51px] block text-center mt-4 tracking-wider'>
                         Host Events
                         <img className='w-[75px] h-[25px] lg:w-[120px] lg:h-[36px] md:w-[100px] md:h-[30px] xl:w-[170px] xl:h-[45px] rounded-3xl inline-block ml-2 mr-2' src={header} alt="Event" />
                         Offers
@@ -26,18 +26,18 @@ export const Body = () => {
                 ></video>
 
             </div>
-            <div className='max-sm:text-md text-white flex max-sm:gap-8 smvideo:gap-20 sm:gap-28 md:gap-36 sm:text-[11px] lg:text-[20px] xl:text-[29px] justify-center items-center'>
-                <p className="flex items-center max-md:flex-col">
-                    <span className='text-[#0080FF] font-bold xl:text-[68px] lg:text-[45px] tab:text-[30px] sm:text-[20px] max-sm:text-lg'>450+</span>
-                    <span className="md:ml-2" style={{ marginTop: '6px' }}>Members</span>
+            <div className='max-sm:text-[16px] text-white flex max-sm:gap-8 smvideo:gap-20 sm:gap-28 md:gap-14 lg:gap-28 2xl:gap-36 sm:text-[15px] tab:text-[20px] xl:text-[29px] justify-center items-center font-semibold tracking-wide'>
+                <p className="flex justify-center items-center max-md:flex-col">
+                    <span className='text-[#0080FF] font-bold xl:text-[68px] sm:text-[45px] max-sm:text-[38px]'>450+</span>
+                    <span className="-ml-4 md:ml-2 max-sm:-mt-2">Members</span>
                 </p>
                 <p className="flex items-center max-md:flex-col">
-                    <span className='text-[#0080FF] font-bold xl:text-[68px] lg:text-[45px] tab:text-[30px] sm:text-[20px] max-sm:text-lg'>5+</span>
-                    <span className="md:ml-2" style={{ marginTop: '6px' }}>Events</span>
+                    <span className='text-[#0080FF] font-bold xl:text-[68px] sm:text-[45px] max-sm:text-[38px]'>5+</span>
+                    <span className="sm:-ml-2 md:ml-2 max-sm:-mt-2">Events</span>
                 </p>
                 <p className="flex items-center max-md:flex-col">
-                    <span className='text-[#0080FF] font-bold xl:text-[68px] lg:text-[45px] tab:text-[30px] sm:text-[20px] max-sm:text-lg'>200+</span>
-                    <span className="md:ml-2" style={{ marginTop: '6px' }}>Participants</span>
+                    <span className='text-[#0080FF] font-bold xl:text-[68px] sm:text-[45px] max-sm:text-[38px]'>200+</span>
+                    <span className="sm:-ml-2 md:ml-2 max-sm:-mt-2">Participants</span>
                 </p>
             </div>
         </>
