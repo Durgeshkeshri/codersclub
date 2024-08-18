@@ -62,7 +62,7 @@ body, html {
       width: 200px; /* Increased size for better visibility */
       height: 200px;
       top: 100px; /* Adjusted position */
-      right: 0px; /* Adjusted position */
+      right: -40px; /* Adjusted position */
     }
   }
   

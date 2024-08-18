@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import codersclub from '../assets/logo.jpg';
+import codersclub from '../assets/codersclub.png';
 
 export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
   const arr = ["Home", "About", "Events", "Gallery"];
@@ -24,10 +24,10 @@ export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
   return (
     <>
       <div className="flex items-center justify-between gap-4 ml-[5%] mr-[5%] sm:ml-[10%] sm:mr-[10%]">
-        <div className="logo z-50">
+        <div className="logo z-40">
           {/* <Link to="/"> Wrap the logo with Link */}
             <img
-              className="max-sm:mt-2 w-10 h-10 sm:w-14 sm:h-14 tab:w-16 tab:h-16 lg:w-20 lg:h-20 cursor-pointer"
+              className="rounded-full max-sm:mt-2 w-10 h-10 sm:w-14 sm:h-14 tab:w-16 tab:h-16 lg:w-20 lg:h-20 cursor-pointer"
               src={codersclub}
               alt="Coders Club Logo"
             />
