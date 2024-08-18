@@ -1,13 +1,18 @@
 import React from 'react';
 import header from '../assets/codefusion.jpg';
 import bgvideo from '../assets/bgvideo.mp4';
-
+import '../App.css'
 export const Body = () => {
     return (
-        <>
+        <>  
+            <div className="relative">
+            <div className="circle"></div>
+            <div className="circle-2"></div>
+            <div className="circle-3"></div>
+            </div>
             <div className="flex justify-center items-center flex-col gap-12">
                 <div className="flex flex-col justify-center items-center text-white leading-tight max-smvideo:font-semibold">
-                    <h1 className='max-sm:text-[39px] sm:text-[40px] tab:text-[60px] xl:text-[90px] font-bold text-center'>
+                    <h1 className='max-sm:text-[32px] sm:text-[40px] tab:text-[60px] xl:text-[90px] font-bold text-center'>
                         WE <span className='text-[#0080FF]'>CODER'S</span> CLUB
                     </h1>
                     <p className='max-sm:text-[21px] sm:text-[25px] tab:text-[34px] xl:text-[51px] block text-center mt-4 tracking-wider'>

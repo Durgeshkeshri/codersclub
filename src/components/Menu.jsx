@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import codersclub from '../assets/logo.jpg';
 
 export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
@@ -23,30 +24,32 @@ export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
   return (
     <>
       <div className="flex items-center justify-between gap-4 ml-[5%] mr-[5%] sm:ml-[10%] sm:mr-[10%]">
-        <div className="logo">
-          <img
-            className="max-sm:mt-2 w-10 h-10 sm:w-14 sm:h-14 tab:w-16 tab:h-16 lg:w-20 lg:h-20"
-            src={codersclub}
-            alt="Coders Club Logo"
-          />
+        <div className="logo z-50">
+          {/* <Link to="/"> Wrap the logo with Link */}
+            <img
+              className="max-sm:mt-2 w-10 h-10 sm:w-14 sm:h-14 tab:w-16 tab:h-16 lg:w-20 lg:h-20 cursor-pointer"
+              src={codersclub}
+              alt="Coders Club Logo"
+            />
+          {/* </Link> */}
         </div>
         <div className="items hidden tab:block">
           <ul className="flex gap-16 text-xl">
             {arr.map((item, index) => (
-              <li key={index} className="text-white hover:text-[#0080FF]">
+              <li key={index} className="text-white hover:text-[#0080FF] cursor-pointer z-50">
                 {item}
               </li>
             ))}
           </ul>
         </div>
         <div className="register hidden tab:block">
-          <button className="hover:bg-white hover:text-[#0080FF] bg-[#0080FF] text-white p-2 rounded-md font-bold text-sm sm:text-base px-4 tracking-wider">
+          <button className="hover:bg-white hover:text-[#0080FF] bg-[#0080FF] text-white p-2 rounded-md font-bold text-sm sm:text-base px-4 tracking-wider cursor-pointer">
             Register
           </button>
         </div>
         <div className="hambutton tab:hidden" onClick={toggleMenu}>
           {/* Hamburger button with background */}
-          <div className="max-sm:mt-2 relative w-8 h-8 sm:w-10 sm:h-10 flex justify-center items-center z-20 cursor-pointer bg-[#0080FF] rounded-md">
+          <div className="max-sm:mt-2 relative w-8 h-8 sm:w-10 sm:h-10 flex justify-center items-center z-50 cursor-pointer bg-[#0080FF] rounded-md">
             <div
               className={`flex flex-col justify-center items-center transition-all duration-300 ${
                 isMenuOpen ? '' : '-mt-[20%]'
@@ -69,7 +72,7 @@ export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
 
       {/* Overlay Menu */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-90 flex flex-col font-bold items-center gap-4 transition-transform duration-500 ease-in-out ${
+        className={`z-40 fixed inset-0 bg-black bg-opacity-90 flex flex-col font-bold items-center gap-4 transition-transform duration-500 ease-in-out ${
           isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'
         }`}
       >
@@ -85,7 +88,7 @@ export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
           ))}
         </ul>
         <button
-          className="hover:bg-white hover:text-[#0080FF] bg-[#0080FF] text-white p-3 rounded-md font-bold text-3xl tracking-wider"
+          className="hover:bg-white hover:text-[#0080FF] bg-[#0080FF] text-white p-2 flex justify-center items-center px-3 z-50 rounded-md font-bold text-3xl tracking-wider"
           onClick={handleLogin}
         >
           Register

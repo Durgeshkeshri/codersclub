@@ -1,0 +1,68 @@
+body, html {
+    overflow-x: hidden; /* Hides horizontal overflow */
+  }
+  
+  .zindex {
+    z-index: 20;
+  }
+  
+  .circle {
+    background-color: #160052;
+    border-radius: 50%;
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top: -400px;
+    left: 174px;
+    filter: blur(100px);
+    z-index: 0;
+  }
+  
+  .circle-2 {
+    background-color: #003C4D;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 100px;
+    left: -250px;
+    filter: blur(100px);
+    z-index: 10;
+  }
+  
+  .circle-3 {
+    background-color: #294801;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -50px;
+    right: -200px;
+    filter: blur(100px);
+    z-index: 10;
+  }
+  
+  /* Media query for screens smaller than 768px */
+  @media (max-width: 767px) {
+    .circle {
+      width: 200px; /* Increased size for better visibility */
+      height: 200px;
+      top: -100px; /* Adjusted position */
+      left: 40px; /* Adjusted position */
+    }
+  
+    .circle-2 {
+      width: 200px; /* Increased size for better visibility */
+      height: 200px;
+      top: 140px; /* Adjusted position */
+      left: 0px; /* Adjusted position */
+    }
+  
+    .circle-3 {
+      width: 200px; /* Increased size for better visibility */
+      height: 200px;
+      top: 100px; /* Adjusted position */
+      right: 0px; /* Adjusted position */
+    }
+  }
+  

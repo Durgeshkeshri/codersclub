@@ -2,6 +2,7 @@ import './App.css'
 import React, { useState, useEffect } from 'react';
 import { Menu } from './components/Menu.jsx'
 import {Body} from './components/Body.jsx'
+import About from './components/About.jsx';
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isWideScreen, setWideScreen] = useState(window.innerWidth > 1024);
@@ -31,11 +32,15 @@ function App() {
   };
 
   return (
-    <> <div className="bg-slate-950">
+    <> <div className="bg-slate-950 font-poppins">
+
      <Menu handleScroll={handleScroll} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu}></Menu>
-     <div className="mt-[3%]">
+
+     <div className="mt-[5%] max-sm:mt-[7%]">
      <Body></Body>
      </div>
+
+     <About></About>
      </div>
     </>
   )

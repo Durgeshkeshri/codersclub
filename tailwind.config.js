@@ -12,6 +12,9 @@ export default {
         smvideo: '420px'
         // Other breakpoints will follow the default Tailwind values
       },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
     },
   },
   plugins: [],
