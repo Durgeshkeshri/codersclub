@@ -1,0 +1,46 @@
+.circular-link {
+  width: 10rem;
+  height: 10rem;
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 820;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  position: relative; // Make the arrow's positioning relative to this element
+
+  &__svg {
+    width: 100%;
+    height: auto;
+    transform-box: fill-box;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(275deg); // Center and rotate the arrow
+    transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+
+    .circular-link:hover & {
+      transform: translate(-50%, -50%) rotate(320deg); // Rotate to 360 degrees on hover
+    }
+  }
+
+  &__text {
+    animation: rotate normal infinite 20s linear;
+    transform-origin: 50% 50%;
+    fill: #ffffff;
+    
+    .circular-link:hover & {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
