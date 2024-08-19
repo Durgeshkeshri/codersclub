@@ -1,5 +1,5 @@
 .circular-link {
-  width: 10rem;
+  width: 10rem; // Default size
   height: 10rem;
   display: inline-block;
   font-family: 'Poppins', sans-serif;
@@ -14,6 +14,10 @@
     width: 100%;
     height: auto;
     transform-box: fill-box;
+
+    circle {
+      transition: r 0.3s ease; // Smooth transition for circle size change
+    }
   }
 
   &__arrow {
@@ -32,9 +36,32 @@
     animation: rotate normal infinite 20s linear;
     transform-origin: 50% 50%;
     fill: #ffffff;
-    
+
     .circular-link:hover & {
       animation-play-state: paused;
+    }
+  }
+
+  // Media query for screens smaller than tablet size
+  @media (max-width: 810px) {
+    width: 8rem; // Reduced size for smaller screens
+    height: 8rem;
+    font-size: 18px; // Reduced text size
+
+    &__arrow {
+      font-size: 50px; // Adjusted arrow size
+    }
+  }
+
+  // Media query for screens smaller than mobile size
+  @media (max-width: 810px) {
+    width: 7rem; // Further reduced size for very small screens
+    height: 7rem;
+    font-size: 18px;
+    letter-spacing: 0.2rem;
+
+    &__arrow {
+      font-size: 40px; // Further reduced arrow size
     }
   }
 }

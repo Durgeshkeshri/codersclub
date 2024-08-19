@@ -23,7 +23,7 @@ export const Body = () => {
                     </p>
                 </div>
                 <video
-                    className="z-20max-sm:w-[320px] max-sm:h-[320px] max-sm:object-cover smvideo:w-[80%] smvideo:h-[30%] rounded-3xl"
+                    className="z-20 max-sm:w-[320px] max-sm:h-[320px] max-sm:object-cover smvideo:w-[80%] smvideo:h-[30%] rounded-3xl brightness-125"
                     src={bgvideo}
                     autoPlay
                     loop

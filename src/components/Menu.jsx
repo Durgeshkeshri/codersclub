@@ -34,7 +34,7 @@ export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
           {/* </Link> */}
         </div>
         <div className="items hidden tab:block">
-          <ul className="flex gap-16 text-xl">
+          <ul className="flex gap-16 text-[17px]">
             {arr.map((item, index) => (
               <li key={index} className="text-white hover:text-[#0080FF] cursor-pointer z-50">
                 {item}

@@ -36,7 +36,7 @@ function App() {
 
      <Menu handleScroll={handleScroll} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu}></Menu>
 
-     <div className="mt-[5%] max-sm:mt-[11%]">
+     <div className="mt-[4%] max-sm:mt-[11%]">
      <Body></Body>
      </div>
 
