@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu } from './components/Menu.jsx'
 import {Body} from './components/Body.jsx'
 import About from './components/About.jsx';
+import Events from './components/Events.jsx';
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isWideScreen, setWideScreen] = useState(window.innerWidth > 1024);
@@ -41,6 +42,7 @@ function App() {
      </div>
 
      <About></About>
+     <Events></Events>
      </div>
     </>
   )
