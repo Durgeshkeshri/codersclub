@@ -1,5 +1,5 @@
 import React from 'react';
-import header from '../assets/codefusion.jpg';
+import header from '../assets/header.jpg';
 import bgvideo from '../assets/bgvideo.mp4';
 import '../App.css'
 export const Body = () => {
