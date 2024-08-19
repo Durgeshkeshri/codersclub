@@ -29,7 +29,7 @@ const About = () => {
           Join Bharati Vidyapeeth, Kharghar's thriving community for coding enthusiasts. Explore coding events, workshops, and exclusive internships. Elevate your skills, collaborate on projects, and connect with industry experts. Let's code the future together!
         </div>
 
-        <div className="flex max-tab:gap-2 gap-8 justify-center items-center mt-6 space-x-4">
+        <div className="flex max-tab:gap-2 gap-8 justify-center items-center mt-6 space-x-2">
           <button className="border-2 border-[#222222] rounded-full p-2">
             <ExploreButton></ExploreButton>
           </button>

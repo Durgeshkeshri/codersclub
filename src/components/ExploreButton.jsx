@@ -24,7 +24,7 @@ const CircularButton = () => {
   }, []);
 
   return (
-    <a href="#" className="circular-link">
+    <a href="#" className="circular-link -mb-[6px]">
       <svg
         viewBox="0 0 200 200"
         width="200"
