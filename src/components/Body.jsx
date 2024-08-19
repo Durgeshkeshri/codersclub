@@ -31,7 +31,7 @@ export const Body = () => {
                 ></video>
 
             </div>
-            <div className='mt-[1%]max-sm:text-[16px] text-white flex max-sm:gap-8 smvideo:gap-16 sm:gap-28 md:gap-14 lg:gap-28 2xl:gap-36 sm:text-[15px] tab:text-[20px] xl:text-[29px] justify-center items-center font-semibold tracking-wide'>
+            <div className='max-sm:mt-[5%] mt-[1%] max-sm:text-[16px] text-white flex max-sm:gap-8 smvideo:gap-16 sm:gap-28 md:gap-14 lg:gap-28 2xl:gap-36 sm:text-[15px] tab:text-[20px] xl:text-[29px] justify-center items-center font-semibold tracking-wide max-sm:mb-[5%]'>
                 <p className="flex justify-center items-center max-md:flex-col">
                     <span className='text-[#0080FF] font-bold xl:text-[68px] sm:text-[45px] max-sm:text-[38px]'>450+</span>
                     <span className="-ml-4 md:ml-2 max-sm:-mt-2">Members</span>
