@@ -24,7 +24,7 @@ const Events = () => {
 
     return (
         <>
-            <div className="flex flex-col justify-center items-center tracking-widest text-white mt-16 max-lg:mt-8">
+            <div className="flex flex-col justify-center items-center tracking-widest text-white mt-16 max-lg:mt-8 mb-[2%]">
                 <div className='text-center'>
                     <h3 className='font-extrabold tab:text-[38px] max-tab:text-[20px] mb-3 max-lg:mb-2'>Our Recent <span className='text-[#0080FF]'>Events</span></h3>
                     <p className='tab:text-[18px] max-tab:text-[13px] px-[12%] max-smvideo:px-[7%]'>A Glimpse into Our Previous Coding Competitions, Hackathons, Workshops, Seminars, and Memorable Moments</p>

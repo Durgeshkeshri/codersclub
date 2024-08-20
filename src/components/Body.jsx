@@ -12,7 +12,7 @@ export const Body = () => {
             </div>
             <div className="flex justify-center items-center flex-col gap-12 max-sm:px-4">
                 <div className="flex flex-col justify-center items-center text-white leading-tight max-smvideo:font-semibold z-20">
-                    <h1 className='max-sm:text-[32px] sm:text-[40px] tab:text-[60px] xl:text-[90px] font-bold text-center'>
+                    <h1 className='max-sm:text-[35px] sm:text-[40px] tab:text-[60px] xl:text-[90px] font-bold text-center'>
                         WE <span className='text-[#0080FF]'>CODER'S</span> CLUB
                     </h1>
                     <p className='max-sm:text-[21px] sm:text-[25px] tab:text-[34px] xl:text-[51px] block text-center mt-4 tracking-wider'>
@@ -23,7 +23,7 @@ export const Body = () => {
                     </p>
                 </div>
                 <video
-                    className="z-20 max-sm:w-[320px] max-sm:h-[320px] max-sm:object-cover smvideo:w-[80%] smvideo:h-[30%] rounded-3xl brightness-125"
+                    className="z-20 max-smvideo:-mt-3 max-sm:w-[320px] max-sm:h-[320px] max-sm:object-cover smvideo:w-[80%] smvideo:h-[30%] rounded-3xl brightness-125"
                     src={bgvideo}
                     autoPlay
                     loop
@@ -48,25 +48,3 @@ export const Body = () => {
         </>
     )
 }
-
-// // Import the functions you need from the SDKs you need
-// import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-// // TODO: Add SDKs for Firebase products that you want to use
-// // https://firebase.google.com/docs/web/setup#available-libraries
-
-// // Your web app's Firebase configuration
-// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDRUkDFe5YLU9ChJJ-p4XDZesMiNPzpPck",
-//   authDomain: "codersclub-7206d.firebaseapp.com",
-//   projectId: "codersclub-7206d",
-//   storageBucket: "codersclub-7206d.appspot.com",
-//   messagingSenderId: "913197893409",
-//   appId: "1:913197893409:web:5c93025b03a2544338a060",
-//   measurementId: "G-BK0RT4SM5D"
-// };
-
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
