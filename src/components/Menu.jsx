@@ -23,7 +23,7 @@ export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
 
   return (
     <>
-      <div className="flex items-center justify-between gap-4 ml-[5%] mr-[5%] sm:ml-[10%] sm:mr-[10%]">
+      <div className="flex items-center justify-between gap-4 ml-[5%] mr-[5%] sm:ml-[10%] sm:mr-[10%] bigpc:px-[4%]">
         <div className="logo z-40">
           {/* <Link to="/"> Wrap the logo with Link */}
           <img

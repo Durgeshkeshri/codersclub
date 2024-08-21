@@ -12,7 +12,7 @@ export const Body = () => {
             </div>
             <div className="flex justify-center items-center flex-col gap-12 max-sm:px-4">
                 <div className="flex flex-col justify-center items-center text-white leading-tight max-smvideo:font-semibold z-20">
-                    <h1 className='max-sm:text-[35px] sm:text-[40px] tab:text-[60px] xl:text-[90px] font-bold text-center'>
+                    <h1 className='max-sm:text-[36px] sm:text-[40px] tab:text-[60px] xl:text-[90px] font-bold text-center'>
                         WE <span className='text-[#0080FF]'>CODER'S</span> CLUB
                     </h1>
                     <p className='max-sm:text-[21px] sm:text-[25px] tab:text-[34px] xl:text-[51px] block text-center mt-4 tracking-wider'>
@@ -23,7 +23,7 @@ export const Body = () => {
                     </p>
                 </div>
                 <video
-                    className="z-20 max-smvideo:-mt-3 max-sm:w-[320px] max-sm:h-[320px] max-sm:object-cover smvideo:w-[80%] smvideo:h-[30%] rounded-3xl brightness-125"
+                    className="z-20 max-smvideo:-mt-3 max-sm:w-[320px] max-sm:h-[320px] max-sm:object-cover smvideo:w-[80%] smvideo:h-[30%] rounded-3xl brightness-125 bigpc:w-[70%] bigpc:h-[25%]"
                     src={bgvideo}
                     autoPlay
                     loop

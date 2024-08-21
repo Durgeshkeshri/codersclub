@@ -10,7 +10,8 @@ export default {
         tab: '810px', // New custom breakpoint at 810px
         lap: '1200px',
         smvideo: '420px',
-        smevent:'550px'
+        smevent:'550px',
+        bigpc:'1600px'
         // Other breakpoints will follow the default Tailwind values
       },
       fontFamily: {
