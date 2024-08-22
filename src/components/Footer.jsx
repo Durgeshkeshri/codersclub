@@ -11,7 +11,7 @@ const Footer = ({ handleScroll }) => {
     };
 
     return (
-        <div className="text-white flex flex-col gap-3 justify-center items-center text-[14px] sm:text-[16px] tracking-wider mt-4 ">
+        <div className="text-white flex flex-col gap-3 justify-center items-center text-[12px] sm:text-[16px] tracking-wider mt-4 ">
             <div className="flex gap-4">
                 <ul className="flex gap-4">
                     {arr.map((item, index) => (
@@ -25,9 +25,9 @@ const Footer = ({ handleScroll }) => {
                     ))}
                 </ul>
             </div>
-            <div className="text-center">
-                <h6>© 2024 CodersClub All Rights Reserved</h6>
-                <p>D&D by Ashfaque Shaikh & Durgesh Keshri with ❤️</p>
+            <div className="text-center mb-3">
+                <h6 className="max-smvideo:text-[12px]">© 2024 CodersClub All Rights Reserved</h6>
+                <p className="max-smvideo:text-[12px]">D&D by Ashfaque Shaikh & Durgesh Keshri with ❤️</p>
             </div>
         </div>
     );
