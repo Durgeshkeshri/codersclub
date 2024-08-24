@@ -8,6 +8,7 @@ import Registration from './components/Registration.jsx';
 import Footer from './components/Footer.jsx';
 import Gallery from './pages/Gallery.jsx';
 import EventPage from './pages/Events.jsx';
+import Event1 from './pages/Event1.jsx';
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isWideScreen, setWideScreen] = useState(window.innerWidth > 1024);
@@ -49,7 +50,8 @@ function App() {
      <Events></Events>
      <Registration></Registration>
      <Footer handleScroll={handleScroll}></Footer>
-     <EventPage></EventPage>
+     {/* <EventPage></EventPage> */}
+     <Event1></Event1>
      {/* <Gallery></Gallery> */}
      </div>
     </>
