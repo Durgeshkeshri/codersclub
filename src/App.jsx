@@ -40,7 +40,7 @@ function App() {
   return (
     <> <div className="bg-slate-950 font-poppins">
 
-     <Menu handleScroll={handleScroll} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu}></Menu>
+     {/* <Menu handleScroll={handleScroll} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu}></Menu>
 
      <div className="mt-[4%] max-sm:mt-[11%]">
      <Body></Body>
@@ -49,7 +49,7 @@ function App() {
      <About></About>
      <Events></Events>
      <Registration></Registration>
-     <Footer handleScroll={handleScroll}></Footer>
+     <Footer handleScroll={handleScroll}></Footer> */}
      {/* <EventPage></EventPage> */}
      <Event1></Event1>
      {/* <Gallery></Gallery> */}
