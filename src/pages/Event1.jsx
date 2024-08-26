@@ -1,7 +1,7 @@
 import React from 'react';
 import event from '../assets/event.jpg';
 import { IoMdCheckmark } from "react-icons/io";
-import './Event.css';
+// import './Event.css';
 
 const Event1 = () => {
   const organisers = [

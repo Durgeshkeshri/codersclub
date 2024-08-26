@@ -8,6 +8,7 @@ import Registration from './components/Registration.jsx';
 import Footer from './components/Footer.jsx';
 import Gallery from './pages/Gallery.jsx';
 import EventPage from './pages/Events.jsx';
+import AboutPage from './pages/About.jsx';
 import Event1 from './pages/Event1.jsx';
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -40,7 +41,7 @@ function App() {
   return (
     <> <div className="bg-slate-950 font-poppins">
 
-     {/* <Menu handleScroll={handleScroll} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu}></Menu>
+     <Menu handleScroll={handleScroll} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu}></Menu>
 
      <div className="mt-[4%] max-sm:mt-[11%]">
      <Body></Body>
@@ -49,10 +50,11 @@ function App() {
      <About></About>
      <Events></Events>
      <Registration></Registration>
-     <Footer handleScroll={handleScroll}></Footer> */}
+     <Footer handleScroll={handleScroll}></Footer> 
      {/* <EventPage></EventPage> */}
-     <Event1></Event1>
+     {/* <Event1></Event1> */}
      {/* <Gallery></Gallery> */}
+     <AboutPage></AboutPage>
      </div>
     </>
   )
