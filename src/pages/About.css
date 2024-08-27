@@ -1,0 +1,36 @@
+/* Animation for the text color */
+@keyframes textColorChange {
+  0% {
+    color: inherit;
+  }
+  50% {
+    color: black;
+  }
+  90% {
+    color: black;
+  }
+  100% {
+    color: inherit;
+  }
+}
+
+/* Animation for the images */
+@keyframes imageMoveAndGrow {
+  0% {
+    transform: translateY(-20px) scale(0.5) rotate(12deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1) rotate(12deg);
+    opacity: 1;
+  }
+}
+
+/* Applying the animations */
+.text-animate {
+  animation: textColorChange 2s ease-in-out forwards;
+}
+
+.image-animate {
+  animation: imageMoveAndGrow 1s ease-in-out forwards;
+}
