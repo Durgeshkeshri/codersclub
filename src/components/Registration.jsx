@@ -3,9 +3,9 @@ import { FaGithub, FaWhatsapp, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { VscCallOutgoing } from 'react-icons/vsc';
 import { LuMail } from 'react-icons/lu';
 
-const Registration = () => {
+const Registration = ({id}) => {
   return (
-    <div className="text-white bg-slate-900 py-12 tracking-wider">
+    <div id={id} className="text-white bg-slate-900 py-12 tracking-wider">
       <div className="xl:flex justify-center px-[6%] gap-3 bigpc:px-[17%]">
         <div className="textandsocialicons flex justify-evenly flex-col xl:gap-44 gap-8 xl:w-1/2 max-lap:ml-[2%]">
 

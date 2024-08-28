@@ -11,7 +11,7 @@ const imageUrls = [
 
 const Gallery = () => {
   return (
-    <div className="w-full max-w-[859px] mx-auto max-sm:px-2">
+    <div className="w-full max-w-[859px] mx-auto max-sm:px-2 mt-6">
       {imageUrls.map((url, index) => {
         const rowIndex = Math.floor(index / 3);
         const isOddRow = rowIndex % 2 === 0;

@@ -19,7 +19,7 @@ const Events = () => {
               Our <span className="text-[#0080FF]">Events</span>
             </h4>
           </div>
-          <div>
+          <div className='mb-6'>
             <ul className="text-[13px] tab:text-[17px] lap:text-[22px] flex gap-4 justify-center">
               {years.map(year => (
                 <li

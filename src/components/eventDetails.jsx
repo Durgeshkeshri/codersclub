@@ -14,5 +14,35 @@ export const eventDetails = [
     image: event2,
     year: 2024,
   },
+  {
+    name: "Hackathon 2024",
+    description: "An intense 48-hour coding marathon held in March 2024, bringing together developers, designers, and entrepreneurs to build innovative solutions.",
+    image: event2,
+    year: 2023,
+  },
+  {
+    name: "Hackathon 2024",
+    description: "An intense 48-hour coding marathon held in March 2024, bringing together developers, designers, and entrepreneurs to build innovative solutions.",
+    image: event2,
+    year: 2023,
+  },
+  {
+    name: "Hackathon 2024",
+    description: "An intense 48-hour coding marathon held in March 2024, bringing together developers, designers, and entrepreneurs to build innovative solutions.",
+    image: event2,
+    year: 2023,
+  },
+  {
+    name: "Hackathon 2024",
+    description: "An intense 48-hour coding marathon held in March 2024, bringing together developers, designers, and entrepreneurs to build innovative solutions.",
+    image: event2,
+    year: 2025,
+  },
+  {
+    name: "Hackathon 2024",
+    description: "An intense 48-hour coding marathon held in March 2024, bringing together developers, designers, and entrepreneurs to build innovative solutions.",
+    image: event2,
+    year: 2024,
+  },
   // Add more events as needed
 ];
