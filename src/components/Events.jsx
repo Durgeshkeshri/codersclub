@@ -1,22 +1,18 @@
 import React, { useState } from 'react';
 import { BsArrowDownRight } from "react-icons/bs";
-import '../App.css'
-import event from '../assets/event.jpg';
+import { useNavigate, Link } from 'react-router-dom'; // Ensure Link is imported
+import { eventDetails } from './eventDetails'; // Adjust the import path as needed
 
 const Events = () => {
     const [isRotated, setIsRotated] = useState(false);
-    const tags = ["Coding Competition", "Coding Competition", "Coding Competition"];
-    const events = ["CodeFusion 1", "CodeFusion 2", "CodeFusion 3"];
+    const navigate = useNavigate(); // Initialize useNavigate hook
 
-    const handleArrowClick = () => {
+    const handleArrowClick = (url) => {
         setIsRotated(true);
-
-        // Simulate opening a new page
         setTimeout(() => {
-            window.location.href = "https://example.com"; // Replace with the actual URL
+            navigate("events"+url); // Use navigate for relative sublinks
         }, 300);
 
-        // Automatically revert back to the original state after 2 seconds
         setTimeout(() => {
             setIsRotated(false);
         }, 2000);
@@ -31,26 +27,26 @@ const Events = () => {
                 </div>
 
                 <div className='flex flex-wrap justify-center max-tab:mt-4 mt-6 mb-4'>
-                    {events.map((eventTitle, index) => (
+                    {eventDetails.map((event, index) => (
                         <div
                             key={index}
                             className="relative w-full tab:w-[267px] tab:h-[334px] max-tab:w-[500px] max-tab:h-[370px] max-smevent:w-[90%] max-smevent:h-[300px] m-4 overflow-visible group transition-transform duration-300 ease-in-out"
                         >
                             <img
                                 className='w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 max-sm:px-4'
-                                src={event}
-                                alt={eventTitle}
+                                src={event.image}
+                                alt={event.name}
                             />
                             <div className="absolute bottom-4 left-0 right-0 flex transition-transform duration-300 group-hover:scale-110 justify-between items-center px-4 py-2 bg-black bg-opacity-50 tracking-tight">
                                 <div className='max-sm:ml-4'>
-                                    <div className='text-[12px]'>{tags[index]}</div>
+                                    <div className='text-[12px]'>{event.name}</div>
                                     <div className='tracking-normal flex-1 text-left text-[16px] tab:text-[20px] lg:text-[24px] font-extrabold'>
-                                        {eventTitle}
+                                        {event.name}
                                     </div>
                                 </div>
                                 <div
                                     className={`mt-2 max-sm:mr-3 max-sm:mt-1 tab:-mr-2 w-[45px] h-[45px] rounded-full bg-[#0080FF] justify-center items-center hidden group-hover:flex transition-transform duration-300 ease-in-out ${isRotated ? 'rotate-[315deg]' : 'rotate-[275deg]'}`}
-                                    onClick={handleArrowClick}
+                                    onClick={() => handleArrowClick(event.link)}
                                 >
                                     <BsArrowDownRight size={25} className="text-white h-[60px]" />
                                 </div>
@@ -58,11 +54,11 @@ const Events = () => {
                         </div>
                     ))}
                 </div>
-
-                <button className='bg-[#0080FF] px-4 py-2 font-bold rounded-lg text-white text-[14px] hidden tab:block transition-colors duration-300 ease-in-out hover:bg-white hover:text-[#0080FF]'>
-                    Explore more Events
-                </button>
-
+                <Link to='/events'>
+                    <button className='bg-[#0080FF] px-4 py-2 font-bold rounded-lg text-white text-[14px] transition-colors duration-300 ease-in-out hover:bg-white hover:text-[#0080FF] mb-2'>
+                        Explore more Events
+                    </button>
+                </Link>
             </div>
         </>
     );

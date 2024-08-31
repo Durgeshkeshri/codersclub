@@ -1,6 +1,7 @@
 import React from 'react'
 import group from '../assets/group.jpg';
 import ExploreButton from './ExploreButton.jsx'
+import { Link } from 'react-router-dom';
 const About = () => {
   return (
 <>
@@ -30,9 +31,11 @@ const About = () => {
         </div>
 
         <div className="flex max-tab:gap-2 gap-8 justify-center items-center mt-6 space-x-2">
+          <Link to='about'>
           <button className="border-2 border-[#222222] rounded-full p-2">
             <ExploreButton></ExploreButton>
           </button>
+          </Link>
           <div>
             <p className=" -mt-4 font-extrabold text-[50px] max-tab:text-[29px] text-[#0080FF]">20K+</p>
             <p className="text-[20px] max-tab:text-[18px] font-medium">Prize Distribution</p>

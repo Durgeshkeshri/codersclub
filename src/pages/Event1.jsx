@@ -1,7 +1,6 @@
 import React from 'react';
 import event from '../assets/event.jpg';
 import { IoMdCheckmark } from "react-icons/io";
-// import './Event.css';
 
 const Event1 = () => {
   const organisers = [
@@ -16,10 +15,7 @@ const Event1 = () => {
 ];
   return (
     <div className="text-white">
-      <div className="circle"></div>
-      <div className="circle-2"></div>
-      <div className="circle-3"></div>
-      <div className='flex flex-col tab:flex-row justify-center xl:px-[8%] tab:px-[6%] tab:gap-8 lap:gap-0 max-tab:px-[6%] max-tab:gap-4 '>
+      <div className='flex flex-col tab:flex-row justify-center xl:px-[8%] tab:px-[6%] tab:gap-8 lap:gap-0 max-tab:px-[6%] max-tab:gap-4 mt-6'>
         <img
           className='w-full h-[300px] object-fill xl:w-[345px] xl:h-[450px] lap:w-[310px] lap:h-[405px] tab:w-[276px] tab:h-[360px] tab:flex-shrink-0'
           src={event}
@@ -101,7 +97,7 @@ const Event1 = () => {
 
       </div>
       
-      <div className="mt-6 xl:px-[8%] px-[6%]">
+      <div className="mt-6 xl:px-[8%] px-[6%] mb-6">
     <p className='font-bold tab:text-[38px] text-[20px] tracking-wider text-center'>
       Event <span className='text-[#0080FF]'>Organisers</span>
     </p>

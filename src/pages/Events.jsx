@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IoIosArrowForward } from "react-icons/io";
-import {eventDetails} from '../components/eventDetails.jsx';
+import { Link } from 'react-router-dom'; // Ensure Link is imported
+import { eventDetails } from '../components/eventDetails.jsx';
 import event1 from '../assets/event.jpg'; // Import the default image
 
 const Events = () => {
@@ -37,7 +38,6 @@ const Events = () => {
             </ul>
           </div>
         </div>
-          {/* <p className="border border-[#0080FF] w-full px-4 mt-3 mb-2"></p> */}
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event, index) => (
             <div key={index} className="flex gap-3 my-3 p-3 hover:bg-slate-900 opacity-90 rounded-2xl max-sm:hover:border hover:border-2 hover:border-[#0080FF]">
@@ -51,9 +51,11 @@ const Events = () => {
                   <p className="font-extrabold lap:text-[35px] tab:text-[30px] text-[22px] max-smvideo:text-[20px]">{event.name}</p>
                   <p className="mt-2 lg:text-[16px] text-[14px] max-smvideo:text-[12px]">{event.description}</p>
                 </div>
-                <p className=" cursor-pointer text-[16px] text-end">
-                  <span className='border-b border-[#0080FF]'>Explore<IoIosArrowForward className="inline-block"></IoIosArrowForward></span>
-                </p>
+                <Link to={`/events${event.link}`}>
+                  <p className="cursor-pointer text-[16px] text-end">
+                    <span className='border-b border-[#0080FF]'>Explore<IoIosArrowForward className="inline-block" /></span>
+                  </p>
+                </Link>
               </div>
               <img
                 className="xl:w-[288px] xl:h-[178px] max-xl:w-[205px] max-xl:h-[160px] max-lg:w-[193px] max-lg:h-[151px] rounded-2xl max-tab:hidden"
