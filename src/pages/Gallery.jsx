@@ -37,7 +37,7 @@ const Gallery = () => {
             key={index}
             className={`inline-block ${
               isLargeImage ? "w-[369px] h-[245px]" : "w-[245px] h-[245px]"
-            } object-cover p-1 rounded-2xl`}
+            } object-fit p-1 rounded-2xl`}
             style={{
               verticalAlign: 'top'
             }}

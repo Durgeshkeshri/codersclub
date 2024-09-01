@@ -24,7 +24,7 @@ const CircularButton = () => {
   }, []);
 
   return (
-    <a href="#" className="circular-link -mb-[6px]">
+    <div href="#" className="circular-link -mb-[6px]">
       <svg
         viewBox="0 0 200 200"
         width="200"
@@ -56,7 +56,7 @@ const CircularButton = () => {
       <div className="circular-link__arrow">
         <BsArrowDownRight size={arrowSize} color="#FFFFFF" /> {/* Dynamic arrow size */}
       </div>
-    </a>
+    </div>
   );
 };
 

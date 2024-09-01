@@ -1,9 +1,85 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import { Client, Databases, ID } from 'appwrite';
 import { FaGithub, FaWhatsapp, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { VscCallOutgoing } from 'react-icons/vsc';
 import { LuMail } from 'react-icons/lu';
 
-const Registration = ({id}) => {
+const Registration = ({ id }) => {
+  const [submitting, setSubmitting] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const courseRef = useRef(null);
+  const yearRef = useRef(null);
+  const divRef = useRef(null);
+  const houseRef = useRef(null);
+  const phoneRef = useRef(null);
+  const eventRef = useRef(null);
+  const messageRef = useRef(null);
+
+  const client = new Client()
+    .setEndpoint('https://cloud.appwrite.io/v1')
+    .setProject('661e9a434c18c473fc6d');
+
+  const databases = new Databases(client);
+
+  const submitForm = async (e) => {
+    e.preventDefault();
+
+    if (
+      nameRef.current.value &&
+      emailRef.current.value &&
+      courseRef.current.value &&
+      yearRef.current.value &&
+      divRef.current.value &&
+      houseRef.current.value &&
+      phoneRef.current.value &&
+      eventRef.current.value &&
+      messageRef.current.value
+    ) {
+      setSubmitting(true);
+      const formData = {
+        name: nameRef.current.value,
+        gmail: emailRef.current.value,
+        course: courseRef.current.value,
+        year: parseInt(yearRef.current.value),
+        div: divRef.current.value,
+        house: houseRef.current.value,
+        phone: phoneRef.current.value,
+        event: eventRef.current.value,
+        message: messageRef.current.value,
+      };
+
+      try {
+        const response = await databases.createDocument(
+          '661ea8cc53f7e32a63b0', // Your collection ID
+          '661ea8d91a1728395ce0',
+          ID.unique(),
+          formData
+        );
+
+        console.log('Form submitted:', response);
+        setShowSuccessMessage(true);
+        // Clear form fields
+        nameRef.current.value = '';
+        emailRef.current.value = '';
+        courseRef.current.value = '';
+        yearRef.current.value = '';
+        divRef.current.value = '';
+        houseRef.current.value = '';
+        phoneRef.current.value = '';
+        eventRef.current.value = '';
+        messageRef.current.value = '';
+        setTimeout(() => setShowSuccessMessage(false), 2000);
+      } catch (error) {
+        console.error('Error:', error);
+      } finally {
+        setSubmitting(false);
+      }
+    }
+  };
+
   return (
     <div id={id} className="text-white bg-slate-900 py-12 tracking-wider">
       <div className="xl:flex justify-center px-[6%] gap-3 bigpc:px-[17%]">
@@ -65,14 +141,14 @@ const Registration = ({id}) => {
             </div>
           </div>
         </div>
-
         <div className="form max-xl:mt-4 xl:w-1/2">
           <p className='tab:text-[22px] text-[13px] mb-2 max-lap:ml-[2%]'>Note: For students from other colleges, include details in the message box.</p>
-          <form action="" className="bg-slate-950 p-4 rounded-xl">
+          <form onSubmit={submitForm} className="bg-slate-950 p-4 rounded-xl">
             <div className="flex flex-wrap gap-4">
               <input
                 type="text"
                 placeholder="Name"
+                ref={nameRef}
                 className="bg-slate-900 p-2 rounded-md w-full"
                 required
               />
@@ -82,6 +158,7 @@ const Registration = ({id}) => {
               <input
                 type="email"
                 placeholder="Email"
+                ref={emailRef}
                 className="bg-slate-900 p-2 rounded-md w-full"
                 required
               />
@@ -89,14 +166,14 @@ const Registration = ({id}) => {
 
             <div className="flex flex-wrap gap-4 mt-4">
               <div className="flex w-full gap-4">
-                <select className="bg-slate-900 p-2 rounded-md w-1/2" required>
+                <select ref={courseRef} className="bg-slate-900 p-2 rounded-md w-1/2" required>
                   <option value="">Course</option>
                   <option value="bca">BCA</option>
                   <option value="bba">BBA</option>
                   <option value="mba">MBA</option>
                   <option value="others">Others</option>
                 </select>
-                <select className="bg-slate-900 p-2 rounded-md w-1/2" required>
+                <select ref={yearRef} className="bg-slate-900 p-2 rounded-md w-1/2" required>
                   <option value="">Year</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -108,14 +185,14 @@ const Registration = ({id}) => {
 
             <div className="flex flex-wrap gap-4 mt-4">
               <div className="flex w-full gap-4">
-                <select className="bg-slate-900 p-2 rounded-md w-1/2" required>
+                <select ref={divRef} className="bg-slate-900 p-2 rounded-md w-1/2" required>
                   <option value="">Division</option>
                   <option value="a">A</option>
                   <option value="b">B</option>
                   <option value="c">C</option>
                   <option value="none">None</option>
                 </select>
-                <select className="bg-slate-900 p-2 rounded-md w-1/2" required>
+                <select ref={houseRef} className="bg-slate-900 p-2 rounded-md w-1/2" required>
                   <option value="">House</option>
                   <option value="kadam">Kadam</option>
                   <option value="kotler">Kotler</option>
@@ -133,13 +210,14 @@ const Registration = ({id}) => {
               <input
                 type="tel"
                 placeholder="Phone"
+                ref={phoneRef}
                 className="bg-slate-900 p-2 rounded-md w-full"
                 required
               />
             </div>
 
             <div className="mt-4">
-              <select className="bg-slate-900 p-2 rounded-md w-full" required>
+              <select ref={eventRef} className="bg-slate-900 p-2 rounded-md w-full" required>
                 <option value="">Upcoming Events</option>
                 <option value="codefusion">Codefusion 3</option>
                 <option value="webathon">Webathon</option>
@@ -151,6 +229,7 @@ const Registration = ({id}) => {
             <div className="mt-4">
               <textarea
                 placeholder="Message"
+                ref={messageRef}
                 rows="5"
                 className="bg-slate-900 p-2 rounded-md w-full"
                 required
@@ -158,9 +237,20 @@ const Registration = ({id}) => {
             </div>
 
             <div className="mt-2 flex justify-end">
-              <button className="bg-[#0080FF] p-2 rounded-md w-[100px] hover:bg-white hover:text-[#0080FF] font-semibold">Register</button>
+              <button
+                type="submit"
+                className="bg-[#0080FF] p-2 rounded-md w-[100px] hover:bg-white hover:text-[#0080FF] font-semibold"
+                disabled={submitting}
+              >
+                {submitting ? 'Sending...' : 'Register'}
+              </button>
             </div>
           </form>
+          {showSuccessMessage && (
+            <div className="fixed bottom-4 right-4 bg-green-500 text-white p-2 rounded-md shadow-md">
+              Form submitted successfully!
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IoIosArrowForward } from "react-icons/io";
-import { Link } from 'react-router-dom'; // Ensure Link is imported
+import { Link, useLocation } from 'react-router-dom'; // Ensure Link and useLocation are imported
 import { eventDetails } from '../components/eventDetails.jsx';
 import event1 from '../assets/event.jpg'; // Import the default image
 
 const Events = () => {
-  const years = [2023, 2024, 2025];
+  const years = [2023, 2024];
   const [selectedYear, setSelectedYear] = useState(years[0]);
+  const location = useLocation();
+
+  // Scroll to the top of the page when the component mounts or the route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   // Filter events based on the selected year
   const filteredEvents = eventDetails.filter(event => event.year === selectedYear);
@@ -51,7 +57,7 @@ const Events = () => {
                   <p className="font-extrabold lap:text-[35px] tab:text-[30px] text-[22px] max-smvideo:text-[20px]">{event.name}</p>
                   <p className="mt-2 lg:text-[16px] text-[14px] max-smvideo:text-[12px]">{event.description}</p>
                 </div>
-                <Link to={`/events${event.link}`}>
+                <Link to={`/events${event.link}`} onClick={() => window.scrollTo(0, 0)}>
                   <p className="cursor-pointer text-[16px] text-end">
                     <span className='border-b border-[#0080FF]'>Explore<IoIosArrowForward className="inline-block" /></span>
                   </p>
