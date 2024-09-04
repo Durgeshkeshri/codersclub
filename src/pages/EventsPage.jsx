@@ -65,7 +65,7 @@ const Events = () => {
               </div>
               <img
                 className="xl:w-[288px] xl:h-[178px] max-xl:w-[205px] max-xl:h-[160px] max-lg:w-[193px] max-lg:h-[151px] rounded-2xl max-tab:hidden"
-                src={event.image}
+                src={event.image1}
                 alt={event.name}
               />
             </div>

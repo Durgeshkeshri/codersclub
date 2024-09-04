@@ -247,7 +247,7 @@ const Registration = ({ id }) => {
             </div>
           </form>
           {showSuccessMessage && (
-            <div className="fixed bottom-4 right-4 bg-green-500 text-white p-2 rounded-md shadow-md">
+            <div className="fixed bottom-4 right-4 bg-[#0080FF] text-white p-2 rounded-md shadow-md">
               Form submitted successfully!
             </div>
           )}

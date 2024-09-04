@@ -1,5 +1,5 @@
 import React from 'react';
-import event from '../assets/event.jpg';
+import event from '../../assets/event.jpg';
 import { IoMdCheckmark } from "react-icons/io";
 
 const Event1 = () => {

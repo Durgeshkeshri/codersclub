@@ -39,7 +39,7 @@ const Events = () => {
                         />
                         <div className="absolute bottom-4 left-0 right-0 flex transition-transform duration-300 group-hover:scale-110 justify-between items-center px-4 py-2 bg-black bg-opacity-50 tracking-tight">
                             <div className='max-sm:ml-4'>
-                                <div className='text-[12px]'>{event.name}</div>
+                                <div className='text-[12px]'>{event.title}</div>
                                 <div className='tracking-normal flex-1 text-left text-[16px] tab:text-[20px] lg:text-[24px] font-extrabold'>
                                     {event.name}
                                 </div>

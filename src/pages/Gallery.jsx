@@ -26,30 +26,31 @@ const Gallery = () => {
   const shuffledImages = [...images].sort(() => Math.random() - 0.5);
 
   return (
-    <div className="w-full max-w-[859px] mx-auto max-sm:px-2 mt-6">
-      {shuffledImages.map((image, index) => {
-        const rowIndex = Math.floor(index / 3);
-        const isOddRow = rowIndex % 2 === 0;
-        const isLargeImage = (index % 3 === 0 && isOddRow) || (index % 3 === 2 && !isOddRow);
+    <div className="flex justify-center items-center max-2xl:min-h-[84vh] lg:px-[8%] px-6">
+      <div className="flex flex-wrap justify-center sm:gap-2 mt-6">
+        {shuffledImages.map((image, index) => {
+          const rowIndex = Math.floor(index / 3);
+          const isOddRow = rowIndex % 2 === 0;
+          const isLargeImage = (index % 3 === 0 && isOddRow) || (index % 3 === 2 && !isOddRow);
 
-        return (
-          <div
-            key={index}
-            className={`inline-block ${
-              isLargeImage ? "w-[369px] h-[245px]" : "w-[245px] h-[245px]"
-            } object-fit p-1 rounded-2xl`}
-            style={{
-              verticalAlign: 'top'
-            }}
-          >
-            <img
-              src={image}
-              alt={`Gallery Image ${index + 1}`}
-              className="w-full h-full object-fit p-1 max-sm:p-[1px] rounded-2xl"
-            />
-          </div>
-        );
-      })}
+          return (
+            <div
+              key={index}
+              className={`w-full sm:w-[calc(33.333%_-_8px)] lg:w-[calc(33.333%_-_8px)] ${
+                isLargeImage
+                  ? "lg:w-[369px] lg:h-[245px] tab:w-[313px] tab:h-[208px] md:w-[277px] md:h-[184px] sm:w-[240px] sm:h-[159px] smevent:w-[203px] smevent:h-[135px] smvideo:w-[147px] smvideo:h-[98px]"
+                  : "lg:w-[245px] lg:h-[245px] tab:w-[208px] tab:h-[208px] md:w-[184px] md:h-[184px] sm:w-[159px] sm:h-[159px] smevent:w-[135px] smevent:h-[135px] smvideo:w-[98px] smvideo:h-[98px]"
+              } object-fit p-1 rounded-2xl`}
+            >
+              <img
+                src={image}
+                alt={`Gallery Image ${index + 1}`}
+                className="w-full h-full object-cover sm:p-1 rounded-2xl"
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

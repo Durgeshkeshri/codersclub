@@ -22,7 +22,7 @@ import saman from '../assets/saman.jpg';
 import soniya from '../assets/soniya.jpg'
 import Story from '../assets/story.jpg'
 import Event from '../assets/event.jpg'
-import './About.css';
+import './AboutPage.css';
 
 const About = () => {
   const data = [
