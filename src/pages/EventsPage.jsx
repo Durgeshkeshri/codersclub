@@ -6,7 +6,7 @@ import event1 from '../assets/event.jpg'; // Import the default image
 
 const Events = () => {
   const years = [2023, 2024];
-  const [selectedYear, setSelectedYear] = useState(years[0]);
+  const [selectedYear, setSelectedYear] = useState(years[1]);
   const location = useLocation();
 
   // Scroll to the top of the page when the component mounts or the route changes

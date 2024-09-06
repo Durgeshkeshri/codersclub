@@ -6,7 +6,7 @@ const About = () => {
   return (
 <>
   <div className="">
-  <div className="mt-[3%] max-bigpc:min-h-[80vh] text-white bg-slate-900 p-8 max-sm:p-6  2xl:px-28 xl:px-16 bigpc:px-[17%]">
+  <div className="mt-[3%] text-white bg-slate-900 p-8 max-sm:p-6 xl:px-[8%] bigpc:px-[12%]">
     <div className="flex flex-wrap lap:flex-row justify-center lap:justify-between items-center">
       
       {/* Image Section (appears on top on smaller screens, in row for lap and larger) */}

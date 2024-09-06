@@ -53,7 +53,7 @@ function App() {
 
   return (
     <Router>
-      <div className="bg-slate-950 font-poppins">
+      <div className="bg-slate-950 font-poppins min-h-screen">
         <Menu handleScroll={handleScroll} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} closeMenu={closeMenu} />
 
         <Routes>

@@ -20,20 +20,20 @@ const Events = () => {
     };
 
     return (
-        <div className="flex flex-col justify-center items-center tracking-widest text-white mt-16 max-lg:mt-8 mb-[2%]">
+        <div className="flex flex-col justify-center items-center tracking-widest text-white mt-16 max-lg:mt-8 mb-6">
             <div className='text-center'>
                 <h3 className='font-extrabold tab:text-[38px] max-tab:text-[20px] mb-3 max-lg:mb-2'>Our Recent <span className='text-[#0080FF]'>Events</span></h3>
                 <p className='tab:text-[18px] max-tab:text-[13px] px-[12%] max-smvideo:px-[7%]'>A Glimpse into Our Previous Coding Competitions, Hackathons, Workshops, Seminars, and Memorable Moments</p>
             </div>
 
-            <div className='flex flex-wrap justify-center max-tab:mt-4 mt-6 mb-4'>
+            <div className='flex flex-wrap justify-center max-tab:mt-4 mt-6 mb-4 lg:gap-2'>
                 {eventDetails.slice(-3).map((event, index) => (
                     <div
                         key={index}
                         className="relative w-full tab:w-[267px] tab:h-[334px] max-tab:w-[500px] max-tab:h-[370px] max-smevent:w-[90%] max-smevent:h-[300px] m-4 overflow-visible group transition-transform duration-300 ease-in-out"
                     >
                         <img
-                            className='w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 max-sm:px-4'
+                            className='opacity-90 w-full h-full object-fit tab:object-cover transition-transform duration-300 group-hover:scale-110 max-sm:px-4'
                             src={event.image}
                             alt={event.name}
                         />

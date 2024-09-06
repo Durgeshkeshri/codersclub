@@ -26,7 +26,7 @@ const Gallery = () => {
   const shuffledImages = [...images].sort(() => Math.random() - 0.5);
 
   return (
-    <div className="flex justify-center items-center max-2xl:min-h-[84vh] lg:px-[8%] px-6">
+    <div className="flex justify-center items-center lg:px-[8%] px-6">
       <div className="flex flex-wrap justify-center sm:gap-2 mt-6">
         {shuffledImages.map((image, index) => {
           const rowIndex = Math.floor(index / 3);

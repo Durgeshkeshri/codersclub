@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import codersclub from '../assets/codersclub.png';
 
 export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
   const arr = ["About", "Events", "Gallery"];
   const [activeLink, setActiveLink] = useState(null);
+  const [shouldScroll, setShouldScroll] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLinkClick = (item) => {
     setActiveLink(item);
@@ -18,9 +21,17 @@ export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
   };
 
   const handleRegisterClick = () => {
-    handleScroll('registration');
+    setShouldScroll(true);
+    navigate('/');
     closeMenu();
   };
+
+  useEffect(() => {
+    if (shouldScroll && location.pathname === '/') {
+      handleScroll('registration');
+      setShouldScroll(false); // Reset the flag after scrolling
+    }
+  }, [location, shouldScroll]);
 
   return (
     <>
@@ -94,6 +105,13 @@ export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
               <Link to={`/${item.toLowerCase()}`}>{item}</Link>
             </li>
           ))}
+          <li
+            key="register"
+            className="bg-[#0080FF] text-white hover:bg-white hover:text-[#0080FF] rounded-xl p-1 px-2 cursor-pointer"
+            onClick={handleRegisterClick}
+          >
+            Register
+          </li>
         </ul>
       </div>
     </>
