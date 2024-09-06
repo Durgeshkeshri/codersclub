@@ -229,7 +229,7 @@ const Registration = ({ id }) => {
                 ref={messageRef}
                 rows="5"
                 className="bg-slate-900 p-2 rounded-md w-full"
-                required
+                
               />
             </div>
 
