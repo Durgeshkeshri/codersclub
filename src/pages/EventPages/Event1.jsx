@@ -4,7 +4,7 @@ import { IoMdCheckmark } from "react-icons/io";
 
 const Event1 = () => {
   return (
-    <div className="text-white">
+    <div className="text-white sm:px-[3%]">
       <div className='flex flex-col tab:flex-row justify-center xl:px-[8%] tab:px-[6%] tab:gap-8 lap:gap-0 max-tab:px-[6%] max-tab:gap-4 mt-6'>
         <img
           className='w-full h-[300px] object-fill xl:w-[345px] xl:h-[450px] lap:w-[310px] lap:h-[405px] tab:w-[276px] tab:h-[360px] tab:flex-shrink-0'
@@ -41,7 +41,7 @@ const Event1 = () => {
             Winners and <span className='text-[#0080FF]'>Awards</span>
           </p>
           <p className='tab:text-[21px] text-[13px] my-2'>
-            We are thrilled to recognize the outstanding participants of our recent DSA-based coding competition. Their deep understanding of data structures, algorithms, and problem-solving skills truly stood out. Here are the top  coders who excelled in the competition:
+            We are thrilled to recognize the outstanding participants of our DSA-based coding competition. Their deep understanding of data structures, algorithms, and problem-solving skills truly stood out. Here are the top  coders who excelled in the competition:
           </p>
         </div>
         <div>

@@ -53,7 +53,7 @@ const Registration = ({ id }) => {
 
       try {
         const response = await databases.createDocument(
-          '661ea8cc53f7e32a63b0', // Your collection ID
+          '661ea8cc53f7e32a63b0',
           '661ea8d91a1728395ce0',
           ID.unique(),
           formData
@@ -61,7 +61,6 @@ const Registration = ({ id }) => {
 
         console.log('Form submitted:', response);
         setShowSuccessMessage(true);
-        // Clear form fields
         nameRef.current.value = '';
         emailRef.current.value = '';
         courseRef.current.value = '';
@@ -220,8 +219,8 @@ const Registration = ({ id }) => {
               <select ref={eventRef} className="bg-slate-900 p-2 rounded-md w-full" required>
                 <option value="">Upcoming Events</option>
                 <option value="codefusion">Codefusion 3</option>
-                <option value="webathon">Webathon</option>
-                <option value="rapidfire">Rapidfire</option>
+                <option value="webathon">Webathon 2</option>
+                <option value="rapidfire">Rapidfire 3</option>
                 <option value="workshop">Workshop</option>
               </select>
             </div>

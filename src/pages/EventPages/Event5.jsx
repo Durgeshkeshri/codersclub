@@ -1,100 +1,67 @@
-import React from 'react';
-import event from '../../assets/event.jpg';
+import event from '../../ImagesCC/img8.jpg';
 import { IoMdCheckmark } from "react-icons/io";
-
-const Event1 = () => {
+import durgesh from '../../assets/durgesh.jpg'
+import anand from '../../assets/anand.jpg'
+import danish from '../../assets/danish.jpg'
+import ashfaque from '../../assets/ashfaque.jpg' 
+import ankit from '../../assets/ankit.jpg'
+import akshay from '../../assets/akshay.jpg'
+import abhisekh from '../../assets/abhisekh.jpg'
+import neha from '../../assets/neha.jpg'
+import vinit from '../../assets/vinit.jpg'
+import pritesh from '../../assets/pritesh.jpg'
+import yash from '../../assets/yash.jpg'
+import kabir from '../../assets/kabir.jpg'
+import more from '../../assets/more.jpg'
+const Event5 = () => {
   const organisers = [
-  { name: 'Durgesh Keshri', role: 'President', image: event },
-  { name: 'Durgesh Keshri', role: 'President', image: event },
-  { name: 'Durgesh Keshri', role: 'President', image: event },
-  { name: 'Durgesh Keshri', role: 'President', image: event },
-  { name: 'Durgesh Keshri', role: 'President', image: event },
-  { name: 'Durgesh Keshri', role: 'President', image: event },
-  { name: 'Durgesh Keshri', role: 'President', image: event },
-  { name: 'Durgesh Keshri', role: 'President', image: event }
+  { name: 'Durgesh Keshri', role: 'President', image: durgesh },
+  { name: 'Danish Shaikh', role: 'Vice-President', image: danish },
+  { name: 'Ashfaque Shaikh', role: 'Secretary', image: ashfaque },
+  { name: 'Abhisekh Gupta', role: 'Technical Head', image: abhisekh },
+  { name: 'Anand Gaud', role: 'Core Member', image: anand },
+  { name: 'Akshay Sharma', role: 'Core Member', image: akshay },
+  { name: 'Ankit Yadav', role: 'Core Member', image: ankit },
+  { name: 'Vivek More', role: 'Core Member', image: more },
+  { name: 'Neha Yadav', role: 'Core Member', image: neha },
+  { name: 'Yash Khatra', role: 'Core Member', image: yash },
+  { name: 'Kabirji Vishwakarma', role: 'Core Member', image: kabir },
+  { name: 'Pritesh Gupta', role: 'Core Member', image: pritesh },
+  { name: 'Vinit Surve', role: 'Core Member', image: vinit },
 ];
-  return (
-    <div className="text-white">
+  return ( 
+    <div className="text-white sm:px-[3%]">
       <div className='flex flex-col tab:flex-row justify-center xl:px-[8%] tab:px-[6%] tab:gap-8 lap:gap-0 max-tab:px-[6%] max-tab:gap-4 mt-6'>
         <img
-          className='w-full h-[300px] object-fill xl:w-[345px] xl:h-[450px] lap:w-[310px] lap:h-[405px] tab:w-[276px] tab:h-[360px] tab:flex-shrink-0'
+          className='w-full h-[300px] object-cover xl:w-[345px] xl:h-[450px] lap:w-[310px] lap:h-[405px] tab:w-[276px] tab:h-[360px] tab:flex-shrink-0'
           src={event}
           alt="Event"
         />
         <div className='xl:pr-[0%] lap:px-[3%] flex flex-col gap-3 tab:ml-0 max-tab:text-left'>
           <h5 className='font-bold lap:text-[51px] tab:text-[31px] text-[26px] max-smvideo:text-[22px] bigpc:text-[70px]'>
-            Code <span className='text-[#0080FF]'>Fusion</span>: A Celebration of Coding Excellence
+            Tech <span className='text-[#0080FF]'>
+              Session</span>
           </h5>
           <p className='lap:text-[21px] tab:text-[17px] text-[13px] bigpc:text-[35px]'>
-            Date Held: <span className='text-[#0080FF]'>July 23, 2k24</span>
+            Date Held: <span className='text-[#0080FF]'>July-26-2k24</span>
           </p>
           <p className='lap:text-[21px] tab:text-[17px] text-[13px] bigpc:text-[35px]'>
-            Join us in celebrating the incredible talent and innovation displayed at [Event Name]. From intense coding challenges to groundbreaking projects, relive the excitement and highlights of this unforgettable event.
+          Join us in celebrating the incredible talent and innovation, From intense coding challenges to groundbreaking projects, relive the excitement and highlights of this unforgettable event.
           </p>
         </div>
       </div>
 
       <div className="lap:text-[22px] tab:text-[19px] text-[13px] px-[6%] xl:px-[8%] flex flex-col gap-3 mt-6 ">
         <p className='tab:text-[38px] font-bold text-[20px]'>Event <span className='text-[#0080FF]'>Overview</span></p>
-        <p className='mt-1'>The [Event Name] Coding Competition, held on [Event Date], was an exhilarating showcase of talent, innovation, and collaboration. Bringing together over [number] of budding coders, tech enthusiasts, and industry experts, the event challenged participants with intensive coding tasks and inspired groundbreaking solutions. The competition highlighted [specific theme or technology] and featured insightful talks, hands-on workshops, and networking opportunities, creating a vibrant atmosphere of camaraderie and excellence.</p>
+        <p className='mt-1'>
+        The tech session, organized by the Coder's Club, was a key component of the First Year (FY) orientation program for BCA students. The guest speaker for the event was Mr. Mulani, a highly experienced Data Engineer from Aditya Birla Group, with over 7 years of expertise in the technology field. Throughout his career, he has contributed to numerous significant projects, which have honed his skills and provided him with a deep understanding of various technological advancements. During the session, Mr. Mulani provided valuable insights into the growing scope of different tech domains, offering students a broader perspective on current and emerging trends in the industry. He also shared his experiences and knowledge, guiding the students on how to navigate their tech careers effectively. The session was interactive and enlightening, giving attendees an opportunity to learn directly from a seasoned professional and inspiring them to explore the vast opportunities available in the world of technology.</p>
         <p className='lap:text-[28px] text-[#0080FF] font-bold tab:text-[25px] text-[15px]'>Highlights</p>
         <ul>
-          <li><IoMdCheckmark className='inline-block text-[#0080FF] mr-2 tab:w-8 tab:h-8 sm:w-6 sm:h-6 w-5 h-5'></IoMdCheckmark>Over 50+ participants</li>
-          <li><IoMdCheckmark className='inline-block text-[#0080FF] mr-2 tab:w-8 tab:h-8 sm:w-6 sm:h-6 w-5 h-5'></IoMdCheckmark>Intensive coding challenges</li>
-          <li><IoMdCheckmark className='inline-block text-[#0080FF] mr-2 tab:w-8 tab:h-8 sm:w-6 sm:h-6 w-5 h-5'></IoMdCheckmark>Focus on Data Structure and Algorithms</li>
-          <li><IoMdCheckmark className='inline-block text-[#0080FF] mr-2 tab:w-8 tab:h-8 sm:w-6 sm:h-6 w-5 h-5'></IoMdCheckmark>Insightful talks from industry professionals</li>
-          <li><IoMdCheckmark className='inline-block text-[#0080FF] mr-2 tab:w-8 tab:h-8 sm:w-6 sm:h-6 w-5 h-5'></IoMdCheckmark>Networking sessions</li>
+          <li><IoMdCheckmark className='inline-block text-[#0080FF] mr-2 tab:w-8 tab:h-8 sm:w-6 sm:h-6 w-5 h-5'></IoMdCheckmark>Over 110+ participants</li>
+          <li><IoMdCheckmark className='inline-block text-[#0080FF] mr-2 tab:w-8 tab:h-8 sm:w-6 sm:h-6 w-5 h-5'></IoMdCheckmark>Tech Session</li>
+          <li><IoMdCheckmark className='inline-block text-[#0080FF] mr-2 tab:w-8 tab:h-8 sm:w-6 sm:h-6 w-5 h-5'></IoMdCheckmark>Industry insights from Suraj Mulani</li>
+          <li><IoMdCheckmark className='inline-block text-[#0080FF] mr-2 tab:w-8 tab:h-8 sm:w-6 sm:h-6 w-5 h-5'></IoMdCheckmark>Networking</li>
         </ul>
-      </div>
-
-      <div className="xl:mx-[8%] mx-[6%] p-4 mt-6 bg-slate-900">
-        <div>
-          <p className='tab:text-[38px] text-[24px] font-bold'>
-            Winners and <span className='text-[#0080FF]'>Awards</span>
-          </p>
-          <p className='tab:text-[21px] text-[13px] my-2'>
-            We are thrilled to recognize the outstanding participants of our recent DSA-based coding competition. Their deep understanding of data structures, algorithms, and problem-solving skills truly stood out. Here are the top ten coders who excelled in the competition:
-          </p>
-        </div>
-        <div>
-          <p className='tab:text-[38px] text-[24px] font-bold mt-2'>LeaderBoard:</p>
-          <table className='w-full mt-4 border-collapse border border-[#0080FF]'>
-            <thead>
-              <tr>
-                {['Rank', 'Participant Name', 'Problems Solved', 'Time'].map((heading, index) => (
-                  <th
-                    key={index}
-                    className={`tab:text-[20px] text-[13px] text-left maxsm:p-1 p-2 border-b border-[#0080FF] ${index !== 3 ? 'border-r' : ''
-                      } border-[#0080FF]`}>
-                    {heading}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                { rank: 1, name: 'John Doe', solved: 10, time: '1:30:45' },
-                { rank: 2, name: 'Jane Smith', solved: 9, time: '1:45:30' },
-                { rank: 3, name: 'Alex Johnson', solved: 9, time: '1:55:10' },
-                { rank: 4, name: 'Michael Brown', solved: 8, time: '2:00:30' },
-                { rank: 5, name: 'Emily Davis', solved: 8, time: '2:15:45' },
-                { rank: 6, name: 'David Wilson', solved: 7, time: '2:30:50' },
-                { rank: 7, name: 'Sarah Miller', solved: 7, time: '2:35:20' },
-                { rank: 8, name: 'Chris Lee', solved: 6, time: '2:45:10' },
-                { rank: 9, name: 'Jessica Taylor', solved: 6, time: '2:50:25' },
-                { rank: 10, name: 'Daniel White', solved: 5, time: '3:00:35' }
-              ].map((participant, index) => (
-                <tr key={index}>
-                  <td className='tab:text-[16px] text-[13px] max-sm:w-[15%] max-sm:p-1 p-2 border-r border-[#0080FF]'>{participant.rank}</td>
-                  <td className='tab:text-[16px] text-[13px] max-sm:w-[%] w-auto max-sm:p-1 p-2 border-r border-[#0080FF]'>{participant.name}</td>
-                  <td className='tab:text-[16px] text-[13px] max-sm:w-[15%] w-auto max-sm:p-1 p-2 border-r border-[#0080FF]'>{participant.solved}</td>
-                  <td className='tab:text-[16px] text-[13px] max-sm:w-[25%]max-sm:p-1 p-2'>{participant.time}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
       </div>
       
       <div className="mt-6 xl:px-[8%] px-[6%] mb-6">
@@ -115,4 +82,4 @@ const Event1 = () => {
   );
 }
 
-export default Event1; 
+export default Event5; 

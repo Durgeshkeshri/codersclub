@@ -52,14 +52,11 @@ const About = () => {
     const textElement = document.querySelector('.text-animate');
     const imageElements = document.querySelectorAll('.image-animate');
 
-    // Trigger text animation
     textElement.classList.add('text-animate');
-
-    // Trigger image animations with delay
     imageElements.forEach((img, index) => {
       setTimeout(() => {
         img.classList.add('image-animate');
-      }, 100 * index); // Adding a slight delay for each image
+      }, 100 * index);
     });
 
   }, []);

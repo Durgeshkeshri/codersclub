@@ -16,7 +16,6 @@ import Event3 from './pages/EventPages/Event3.jsx';
 import Event4 from './pages/EventPages/Event4.jsx';
 import Event5 from './pages/EventPages/Event5.jsx';
 import Event6 from './pages/EventPages/Event6.jsx';
-import Event7 from './pages/EventPages/Event7.jsx';
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -140,14 +139,6 @@ function App() {
             element={
               <>
                 <Event6 />
-              </>
-            } 
-          />
-          <Route 
-            path="/events/event7" 
-            element={
-              <>
-                <Event7 />
               </>
             } 
           />

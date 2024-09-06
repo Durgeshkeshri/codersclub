@@ -1,7 +1,6 @@
 import teche from '../assets/teche.jpg';
 import techs from '../assets/techs.jpg';
-import cf from '../assets/cf.png';
-import alkemydesk from '../assets/alkemydesk.jpg';
+import cf from '../assets/cf.jpg';
 import cf1 from '../ImagesCC/img15.jpg'
 import cf2 from '../ImagesCC/img16.jpg'
 import alkemyc from '../ImagesCC/img5.jpg';
@@ -17,7 +16,7 @@ export const eventDetails = [
     image: cf,
     image1: cf,
     year: 2023,
-    link: "/event1" // Relative sublink
+    link: "/event1"
   },
   {
     name: "CodeFusion 1",
@@ -26,7 +25,7 @@ export const eventDetails = [
     image: cf1,
     image1: cf1,
     year: 2023,
-    link: "/event2" // Relative sublink
+    link: "/event2"
   },
   {
     name: "CodeFusion 2",
@@ -35,25 +34,16 @@ export const eventDetails = [
     image: cf2,
     image1: cf2,
     year: 2023,
-    link: "/event3" // Relative sublink
+    link: "/event3"
   },
   {
-    name: "Alkemy P-R",
+    name: "Alkemy DMS",
     title : 'Coding Competition',
-    description: "An intercollege problem solving coding competition held as part of the annual fest, similar to CodeFusion events.",
+    description: "An intercollege problem solving & Web coding competition held as part of the annual fest.",
     image: alkemyc,
-    image1: alkemydesk,
+    image1: alkemyw,
     year: 2024,
-    link: "/event4" // Relative sublink
-  },
-  {
-    name: "Alkemy Web",
-    title : 'Coding Competition',
-    description: "A two-hour intercollege event where participants designed websites using provided templates, This was the part of annual fest.",
-    image: alkemyw,
-    image1: alkemy,
-    year: 2024,
-    link: "/event5" // Relative sublink
+    link: "/event4"
   },
   {
     name: "Tech Games",
@@ -62,7 +52,7 @@ export const eventDetails = [
     image: teche,
     image1: game,
     year: 2024,
-    link: "/event6" // Relative sublink
+    link: "/event6" 
   },
   {
     name: "Tech Session",
@@ -71,7 +61,6 @@ export const eventDetails = [
     image: techs,
     image1:session,
     year: 2024,
-    link: "/event7" // Relative sublink
+    link: "/event7"
   },
-  // Add more events as needed
 ];

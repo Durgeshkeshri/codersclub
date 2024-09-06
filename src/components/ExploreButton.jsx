@@ -3,22 +3,22 @@ import { BsArrowDownRight } from "react-icons/bs";
 import { useState, useEffect } from 'react';
 
 const CircularButton = () => {
-  const [arrowSize, setArrowSize] = useState(60); // Default arrow size
-  const [circleRadius, setCircleRadius] = useState(65); // Default circle radius
+  const [arrowSize, setArrowSize] = useState(60); 
+  const [circleRadius, setCircleRadius] = useState(65); 
 
   useEffect(() => {
     const updateSize = () => {
       if (window.innerWidth < 810) {
-        setArrowSize(40); // Reduced arrow size for small screens
-        setCircleRadius(60); // Reduced radius for small screens
+        setArrowSize(40);
+        setCircleRadius(60); 
       } else {
-        setArrowSize(60); // Default arrow size
-        setCircleRadius(65); // Default circle radius
+        setArrowSize(60);
+        setCircleRadius(65); 
       }
     };
 
     window.addEventListener('resize', updateSize);
-    updateSize(); // Check initial size
+    updateSize(); 
 
     return () => window.removeEventListener('resize', updateSize);
   }, []);
@@ -38,7 +38,7 @@ const CircularButton = () => {
           A rotating button with text placed around a circle and an arrow that animates on hover
         </desc>
         
-        <circle cx="100" cy="100" r={circleRadius} fill="#0080FF" /> {/* Dynamic inner circle radius */}
+        <circle cx="100" cy="100" r={circleRadius} fill="#0080FF" /> 
 
         <path
           id="link-circle"
@@ -54,7 +54,7 @@ const CircularButton = () => {
         </text>
       </svg>
       <div className="circular-link__arrow">
-        <BsArrowDownRight size={arrowSize} color="#FFFFFF" /> {/* Dynamic arrow size */}
+        <BsArrowDownRight size={arrowSize} color="#FFFFFF" />
       </div>
     </div>
   );

@@ -1,20 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { IoIosArrowForward } from "react-icons/io";
-import { Link, useLocation } from 'react-router-dom'; // Ensure Link and useLocation are imported
+import { Link, useLocation } from 'react-router-dom';
 import { eventDetails } from '../components/eventDetails.jsx';
-import event1 from '../assets/event.jpg'; // Import the default image
+import event1 from '../assets/event.jpg';
 
 const Events = () => {
   const years = [2023, 2024];
   const [selectedYear, setSelectedYear] = useState(years[1]);
   const location = useLocation();
-
-  // Scroll to the top of the page when the component mounts or the route changes
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  // Filter events based on the selected year
   const filteredEvents = eventDetails.filter(event => event.year === selectedYear);
 
   return (

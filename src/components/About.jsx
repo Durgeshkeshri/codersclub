@@ -8,8 +8,6 @@ const About = () => {
   <div className="">
   <div className="mt-[3%] text-white bg-slate-900 p-8 max-sm:p-6 xl:px-[8%] bigpc:px-[12%]">
     <div className="flex flex-wrap lap:flex-row justify-center lap:justify-between items-center">
-      
-      {/* Image Section (appears on top on smaller screens, in row for lap and larger) */}
       <div className="w-full lap:w-auto lap:order-2 flex justify-center lap:justify-end mb-8 lap:mb-0">
         <img 
           className="max-smvideo:w-full w-[468px] h-[250px] tab:w-[585px] tab:h-[350px] lap:w-[550px] lap:h-[525px] xl:w-[585px] xl:h-[550px] object-cover rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:brightness-110" 

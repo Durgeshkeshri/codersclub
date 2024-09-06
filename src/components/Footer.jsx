@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
     const arr = ["Home", "About", "Events", "Gallery"];
@@ -8,7 +8,7 @@ const Footer = () => {
 
     const handleLinkClick = (item) => {
         setActiveLink(item);
-        window.scrollTo(0, 0); // Scroll to the top of the page
+        window.scrollTo(0, 0);
         navigate(item === "Home" ? "/" : `/${item.toLowerCase()}`);
     };
 

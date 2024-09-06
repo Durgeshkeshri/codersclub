@@ -29,7 +29,7 @@ export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
   useEffect(() => {
     if (shouldScroll && location.pathname === '/') {
       handleScroll('registration');
-      setShouldScroll(false); // Reset the flag after scrolling
+      setShouldScroll(false);
     }
   }, [location, shouldScroll]);
 
@@ -64,7 +64,7 @@ export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
             Register
           </button>
         </div>
-        <div className="hambutton tab:hidden" onClick={toggleMenu}>
+        <div className="hambutton tab:hidden " onClick={toggleMenu}>
           <div className="max-sm:mt-2 relative w-8 h-7 sm:w-10 sm:h-10 flex justify-center items-center z-50 cursor-pointer bg-[#0080FF] rounded-md">
             <div
               className={`flex flex-col justify-center items-center transition-all duration-300 ${isMenuOpen ? '' : '-mt-[20%]'
@@ -82,8 +82,6 @@ export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
           </div>
         </div>
       </div>
-
-      {/* Overlay Menu */}
       <div
         className={`z-40 fixed inset-0 bg-slate-950 flex flex-col font-bold items-center gap-4 transition-transform duration-500 ease-in-out ${isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'
           }`}
@@ -107,7 +105,7 @@ export const Menu = ({ isMenuOpen, toggleMenu, closeMenu, handleScroll }) => {
           ))}
           <li
             key="register"
-            className="bg-[#0080FF] text-white hover:bg-white hover:text-[#0080FF] rounded-xl p-1 px-2 cursor-pointer"
+            className="bg-[#0080FF] text-white hover:bg-white hover:text-[#0080FF] text-[27px] rounded-lg p-1 px-3 cursor-pointer"
             onClick={handleRegisterClick}
           >
             Register
