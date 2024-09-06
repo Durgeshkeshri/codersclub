@@ -52,7 +52,7 @@ export const eventDetails = [
     image: teche,
     image1: game,
     year: 2024,
-    link: "/event6" 
+    link: "/event5" 
   },
   {
     name: "Tech Session",
@@ -61,6 +61,6 @@ export const eventDetails = [
     image: techs,
     image1:session,
     year: 2024,
-    link: "/event7"
+    link: "/event6"
   },
 ];
