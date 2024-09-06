@@ -83,7 +83,6 @@ const Registration = ({ id }) => {
     <div id={id} className="text-white bg-slate-900 py-12 tracking-wider">
       <div className="xl:flex justify-center px-[6%] gap-3 bigpc:px-[17%]">
         <div className="textandsocialicons flex justify-evenly flex-col xl:gap-44 gap-8 xl:w-1/2 max-lap:ml-[2%]">
-
           <div>
             <h4 className="text-[#0080FF] font-bold tab:text-[22px] max-tab:text-[18px]">STAY CONNECTED</h4>
             <p className="tab:text-[50px] max-tab:text-[29px] font-bold">Register For Your Next Events</p>
@@ -135,7 +134,6 @@ const Registration = ({ id }) => {
                     <FaLinkedin size={25} />
                   </a>
                 </div>
-
               </div>
             </div>
           </div>
@@ -189,7 +187,7 @@ const Registration = ({ id }) => {
                   <option value="a">A</option>
                   <option value="b">B</option>
                   <option value="c">C</option>
-                  <option value="none">None</option>
+                  <option value="d">D</option>
                 </select>
                 <select ref={houseRef} className="bg-slate-900 p-2 rounded-md w-1/2" required>
                   <option value="">House</option>
@@ -231,7 +229,7 @@ const Registration = ({ id }) => {
                 ref={messageRef}
                 rows="5"
                 className="bg-slate-900 p-2 rounded-md w-full"
-
+                required
               />
             </div>
 
