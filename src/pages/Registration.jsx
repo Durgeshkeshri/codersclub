@@ -19,8 +19,8 @@ const Registration = ({ id }) => {
   const messageRef = useRef(null);
 
   const client = new Client()
-    .setEndpoint('https://cloud.appwrite.io/v1')
-    .setProject('661e9a434c18c473fc6d');
+    .setEndpoint(import.meta.env.VITE_API_ENDPOINT) // Updated for Vite
+    .setProject(import.meta.env.VITE_PROJECT_ID); // Updated for Vite
 
   const databases = new Databases(client);
 
@@ -53,8 +53,8 @@ const Registration = ({ id }) => {
 
       try {
         const response = await databases.createDocument(
-          '661ea8cc53f7e32a63b0',
-          '661ea8d91a1728395ce0',
+          import.meta.env.VITE_DATABASE_ID, // Updated for Vite
+          import.meta.env.VITE_COLLECTION_ID, // Updated for Vite
           ID.unique(),
           formData
         );
@@ -231,7 +231,7 @@ const Registration = ({ id }) => {
                 ref={messageRef}
                 rows="5"
                 className="bg-slate-900 p-2 rounded-md w-full"
-                required
+
               />
             </div>
 
