@@ -3,6 +3,9 @@ import group from '../assets/group.jpg';
 import ExploreButton from './ExploreButton.jsx'
 import { Link } from 'react-router-dom';
 const About = () => {
+const handletop = () => {
+    window.scrollTo(0,0)
+    };
   return (
 <>
   <div className="">
@@ -30,7 +33,7 @@ const About = () => {
 
         <div className="flex max-tab:gap-2 gap-8 justify-center items-center mt-6 space-x-2">
           <Link to='about'>
-          <button className="border-2 border-[#222222] rounded-full p-2">
+          <button className="border-2 border-[#222222] rounded-full p-2" onClick={handletop}>
             <ExploreButton></ExploreButton>
           </button>
           </Link>
