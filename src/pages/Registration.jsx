@@ -26,7 +26,7 @@ const Registration = ({ id }) => {
 
   const submitForm = async (e) => {
     e.preventDefault();
-
+  
     if (
       nameRef.current.value &&
       emailRef.current.value &&
@@ -35,8 +35,7 @@ const Registration = ({ id }) => {
       divRef.current.value &&
       houseRef.current.value &&
       phoneRef.current.value &&
-      eventRef.current.value &&
-      messageRef.current.value
+      eventRef.current.value
     ) {
       setSubmitting(true);
       const formData = {
@@ -48,9 +47,9 @@ const Registration = ({ id }) => {
         house: houseRef.current.value,
         phone: phoneRef.current.value,
         event: eventRef.current.value,
-        message: messageRef.current.value,
+        message: messageRef.current.value || '', // Default to empty string if no message is provided
       };
-
+  
       try {
         const response = await databases.createDocument(
           import.meta.env.VITE_DATABASE_ID, // Updated for Vite
@@ -58,7 +57,7 @@ const Registration = ({ id }) => {
           ID.unique(),
           formData
         );
-
+  
         console.log('Form submitted:', response);
         setShowSuccessMessage(true);
         nameRef.current.value = '';
@@ -78,6 +77,7 @@ const Registration = ({ id }) => {
       }
     }
   };
+  
 
   return (
     <div id={id} className="text-white bg-slate-900 py-12 tracking-wider">
