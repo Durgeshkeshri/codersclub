@@ -97,7 +97,7 @@ const Registration = ({ id }) => {
                 </div>
                 <div>
                   <p className="font-semibold">Phone</p>
-                  <p className="text-sm">+919987400752 / +1234567123</p>
+                  <p className="text-sm">+918828179604 / +919594317571</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -216,10 +216,7 @@ const Registration = ({ id }) => {
             <div className="mt-4">
               <select ref={eventRef} className="bg-slate-900 p-2 rounded-md w-full" required>
                 <option value="">Upcoming Events</option>
-                <option value="codefusion">Codefusion 3</option>
-                <option value="webathon">Webathon 2</option>
-                <option value="rapidfire">Rapidfire 3</option>
-                <option value="workshop">Workshop</option>
+                <option value="codefusion">Codefusion 4</option>
               </select>
             </div>
 

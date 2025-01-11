@@ -4,21 +4,13 @@ import danish from '../assets/danish.jpg';
 import ashfaque from '../assets/ashfaque.jpg';
 import abhisekh from '../assets/abhisekh.jpg';
 import rudra from '../assets/rudra.jpg';
-import anand from '../assets/anand.jpg';
-import akshay from '../assets/akshay.jpg';
-import ankit from '../assets/ankit.jpg';
 import neha from '../assets/neha.jpg';
 import vinit from '../assets/vinit.jpg';
 import yash from '../assets/yash.jpg';
-import vasanta from '../assets/vasanta.jpg';
 import swara from '../assets/swara.jpg';
-import manisha from '../assets/manisha.jpg';
-import priyanshu from '../assets/priyanshu.jpg';
 import sakthi from '../assets/sakthi.jpg';
 import kabir from '../assets/kabir.jpg';
 import sweekriti from '../assets/sweekriti.jpg';
-import yuvraj from '../assets/yuvraj.jpg';
-import saman from '../assets/saman.jpg';
 import soniya from '../assets/soniya.jpg'
 import Story from '../assets/story.jpg'
 import Event from '../assets/event.jpg'
@@ -26,27 +18,19 @@ import './AboutPage.css';
 
 const About = () => {
   const data = [
-    { image: durgesh, name: 'Durgesh Keshri', title: 'President' },
-    { image: danish, name: 'Danish Shaikh', title: 'Vice-President' },
-    { image: ashfaque, name: 'Ashfaque Shaikh', title: 'UI/UX Lead' },
-    { image: abhisekh, name: 'Abhisekh Gupta', title: 'DS Lead' },
-    { image: rudra, name: 'Jyotiaditya Mourya', title: 'DSA Lead' },
-    { image: anand, name: 'Anand Gaud', title: 'Discipline' },
-    { image: akshay, name: 'Akshay Sharma', title: 'Videography' },
-    { image: ankit, name: 'Ankit Yadav', title: 'Photography' },
-    { image: neha, name: 'Neha Yadav', title: 'Tech Head' },
-    { image: vinit, name: 'Vinit Surve', title: 'Tech Co-Head' },
+    { image: durgesh, name: 'Durgesh Keshri', title: 'Founder' },
+    { image: danish, name: 'Danish Shaikh', title: 'Co-Founder' },
+    { image: ashfaque, name: 'Ashfaque Shaikh', title: 'Co-Founder' },
+    { image: abhisekh, name: 'Abhisekh Gupta', title: 'Co-Founder' },
+    { image: rudra, name: 'Jyotiaditya Mourya', title: 'Co-Founder' },
+    { image: vinit, name: 'Vinit Surve', title: 'President' },
+    { image: neha, name: 'Neha Yadav', title: 'Vice-President' },
     { image: yash, name: 'Yash Khatra', title: 'Event Head' },
-    { image: vasanta, name: 'Vasanta Amogth', title: 'Event Co-Head' },
     { image: swara, name: 'Swara Mangoankar', title: 'PR Head' },
-    { image: manisha, name: 'Manisha Devadiga', title: 'PR Co-Head' },
-    { image: priyanshu, name: 'Priyanshu Jash', title: 'Tech Member' },
-    { image: sakthi, name: 'Sakthi Bala', title: 'Tech Member' },
-    { image: kabir, name: 'Kabir Vishwakarma', title: 'Event Member' },
-    { image: soniya, name: 'Soniya Singh', title: 'Event Member' },
-    { image: sweekriti, name: 'Sweekriti Dubey', title: 'PR Member' },
-    { image: yuvraj, name: 'Yuvraj Dubule', title: 'PR Member' },
-    { image: saman, name: 'Saman shaikh', title: 'PR Member' },
+    { image: sakthi, name: 'Sakthi Bala', title: 'Tech Head' },
+    { image: kabir, name: 'Kabir Vishwakarma', title: 'Event Co-Head' },
+    { image: sweekriti, name: 'Sweekriti Dubey', title: 'PR Co-Head' },
+    { image: soniya, name: 'Soniya Singh', title: 'Tech Co-Head' },
   ];
   useEffect(() => {
     const textElement = document.querySelector('.text-animate');
