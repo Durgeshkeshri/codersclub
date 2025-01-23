@@ -216,7 +216,7 @@ const Registration = ({ id }) => {
             <div className="mt-4">
               <select ref={eventRef} className="bg-slate-900 p-2 rounded-md w-full" required>
                 <option value="">Upcoming Events</option>
-                <option value="codefusion">Codefusion 4</option>
+                <option value="codefusion">No Upcoming Events!</option>
               </select>
             </div>
 
